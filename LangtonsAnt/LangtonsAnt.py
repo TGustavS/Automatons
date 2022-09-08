@@ -41,7 +41,10 @@ def langstonsAnt(moves,steps,size):
         if current[0] == 0 or current[1] == 0:
             print('Board is to small')
             break
-        if steps > 500 and i%10 == 0:     
+        if steps > 500 and i%100 == 0:     
+            data = ax.imshow(Board, cmap=my_cmap, extent=[0, n, 0, n])
+            ims.append((data,))
+        elif steps < 500:
             data = ax.imshow(Board, cmap=my_cmap, extent=[0, n, 0, n])
             ims.append((data,))
         tem = copy.deepcopy(current)
