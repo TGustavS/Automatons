@@ -22,14 +22,14 @@ def translate(moves):
     return tem
 
 
-def langstonsAnt(moves,steps,size): 
+def langstonsAnt(moves,steps,size,frame): 
     n = size
     m = len(moves) 
     current = [n//2,n//2]
     Board = create(n)
     direc = 'N'
     fig, ax = plt.subplots(tight_layout=True)
-    my_cmap = matplotlib.colors.ListedColormap(['w', 'g','r','y','b','c','m','k','silver','gold'])
+    my_cmap = matplotlib.colors.ListedColormap(['w', 'y','r','b','c','m','k','gold','silver','g'])
     ax.axis('off')
     # Grid
     for x in range(n + 1):
@@ -41,18 +41,16 @@ def langstonsAnt(moves,steps,size):
         if current[0] == 0 or current[1] == 0:
             print('Board is to small')
             break
-        if steps > 500 and i%100 == 0:     
+        if i%frame == 0:     
             data = ax.imshow(Board, cmap=my_cmap, extent=[0, n, 0, n])
             ims.append((data,))
-        elif steps < 500:
-            data = ax.imshow(Board, cmap=my_cmap, extent=[0, n, 0, n])
-            ims.append((data,))
+            
         tem = copy.deepcopy(current)
         current[0] += orient[direc][moves[Board[tem[0]][tem[1]]]][0]
         current[1] += orient[direc][moves[Board[tem[0]][tem[1]]]][1]
         direc = orient[direc][moves[Board[tem[0]][tem[1]]]][2]
         Board[current[0]][current[1]] = (Board[current[0]][current[1]]+1)%m
-        
+
         
     im_ani = animation.ArtistAnimation(
         fig, ims, interval=1, repeat_delay=300, blit=True
@@ -69,5 +67,6 @@ if __name__ == "__main__":
     moves = input('Input movement pattern eg.: RRLL\n')
     steps = int(input('Input number of Steps:\n'))
     size = int(input('Input size of board:\n'))
+    frame = int(input('Steps per frame:\n'))
     moves = translate(moves)
-    langstonsAnt(moves,steps,size)
+    langstonsAnt(moves,steps,size,frame)
