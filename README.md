@@ -7,9 +7,14 @@ Check https://en.wikipedia.org/wiki/Langton%27s_ant for a full explanation. In s
 I had some bugs savong some of my results so here are some nice looking ones I was able to save:
 
 <p align="center">
-    <img width=30% src="https://github.com/TGustavS/Automatons/blob/main/LangtonsAnt/Gifs/Langtons1.gif">
+    <img width=50% src="https://github.com/TGustavS/Automatons/blob/main/LangtonsAnt/Gifs/Langton1.gif">
 </p>
 
+# Pyramid
+This is the first Automaton considered in 'A new kind of science'. Here each cell is either on or off depending on the states of the three cells above it. Interestingly one can get extremly complex behavoir even with such an simple premise. Below is a picture of Rule 30 creates such complex structures that its middle row was used as a random number generator in the mathematica programming language. The structure of it is still not understood.
+
+https://github.com/TGustavS/Automatons/blob/main/Pyramid/Rule30.png
+
 <p align="center">
-    <img width=50% src="https://github.com/TGustavS/Automatons/blob/main/LangtonsAnt/Gifs/Langtons2.gif">
+    <img width=50% src="https://github.com/TGustavS/Automatons/blob/main/Pyramid/Rule30.png">
 </p>
