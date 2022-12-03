@@ -12,9 +12,10 @@ This is the first Automaton considered in 'A new kind of science'. Here each cel
 
 
 # Langton's Ant
-Check https://en.wikipedia.org/wiki/Langton%27s_ant for a full explanation. In short there is an ant in the middle of the board that either moves left or right depending on the color of the tile it steps on. When a tile is stepped on it will change its color through a predetermined list of colors it can cycle through. <br>
+Check https://en.wikipedia.org/wiki/Langton%27s_ant for a full explanation. In short there is an ant in the middle of the board that either moves left or right depending on the color of the tile it steps. When a tile is stepped on it will change its color through a predetermined list of colors it can cycle through. <br>
+Eg. the rule LR means we have two colors: white and yellow. When the ant steps on a white tile the tile becomes yellow and the ant turns left. When it steps on a yellow tile it becomes white and turns right. <br>
 
-I had some bugs while saving my results so here are some nice looking ones I was able to save. The rule is LLRR.
+I had some bugs while saving my results as a GIF so here are some nice looking ones I was able to save. The rule is LLRR.
 
 <p align="center">
     <img width=50% src="https://github.com/TGustavS/Automatons/blob/main/LangtonsAnt/Gifs/Langton2.gif">
